@@ -241,7 +241,7 @@ access-list 100 deny icmp 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255 echo
 # Permitir las respuestas ping de la red 192.168.10.0 (VLAN 10) hacia 192.168.20.0 (VLAN 20).
 access-list 100 permit icmp 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255 echo-reply
 # Permite todo el tráfico IP
-permit ip any any
+access-list 100 permit ip any any
 # Aplicar la ACL en la interfaz de salida
 interface port-channel 1
 ip access-group 100 out
@@ -290,7 +290,7 @@ access-list 101 permit icmp 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255 echo
 # Permitir las respuestas ping de la red 192.168.20.0 (VLAN 20) hacia 192.168.10.0 (VLAN 10).
 access-list 101 deny icmp 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255 echo-reply
 # Permite todo el tráfico IP
-permit ip any any
+access-list 101 permit ip any any
 # Aplicar la ACL en la interfaz de salida
 interface port-channel 2
 ip access-group 101 out
