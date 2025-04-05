@@ -6,6 +6,8 @@ router bgp 65001
 neighbor 10.0.50.2 remote-as 65002
 neighbor 10.0.60.2 remote-as 65003
 network 10.0.10.0 mask 255.255.255.252
+network 10.0.50.0 mask 255.255.255.252
+network 10.0.60.0 mask 255.255.255.252
 ```
 
 ```shell
@@ -25,6 +27,8 @@ router bgp 65002
 neighbor 10.0.50.1 remote-as 65001
 neighbor 10.0.70.2 remote-as 65003
 network 10.0.20.0 mask 255.255.255.252
+network 10.0.50.0 mask 255.255.255.252
+network 10.0.70.0 mask 255.255.255.252
 ```
 
 ```shell
@@ -44,6 +48,8 @@ router bgp 65003
 neighbor 10.0.60.1 remote-as 65001
 neighbor 10.0.70.1 remote-as 65002
 network 10.0.30.0 mask 255.255.255.252
+network 10.0.60.0 mask 255.255.255.252
+network 10.0.70.0 mask 255.255.255.252
 ```
 
 ```shell
