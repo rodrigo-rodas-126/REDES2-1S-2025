@@ -22,6 +22,9 @@
 
 ### Red Inalambrica
 
+**SSID:** REDES2 \
+**PSK:** REDES2S2025
+
 |ID RED|MASCARA|GATEWAY|IP INTERNET|
 |-|-|-|-|
 |ROUTER||||
