@@ -345,7 +345,6 @@ channel-group 1 mode passive
 no shutdown
 exit
 interface port-channel 1
-no switchport
 ip address 10.0.70.2 255.255.255.252
 no shutdown
 exit
