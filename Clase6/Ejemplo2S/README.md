@@ -374,7 +374,7 @@ do write
 ```shell
 enable
 configure terminal
-hostname MSW0
+hostname MSW2
 ip routing
 interface range fastEthernet 0/1-24
 no shutdown
