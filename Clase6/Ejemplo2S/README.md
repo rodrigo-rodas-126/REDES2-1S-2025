@@ -112,6 +112,13 @@ network 192.168.20.0 0.0.0.255
 network 10.0.10.0 0.0.0.3
 no auto-summary
 exit
+!-- Configuracion DHCP
+interface gigabitEthernet 0/0.10
+ip helper-address 192.168.30.20
+exit
+interface gigabitEthernet 0/0.20
+ip helper-address 192.168.30.20
+exit
 do write
 ```
 
@@ -156,6 +163,13 @@ network 192.168.10.0 0.0.0.255
 network 192.168.20.0 0.0.0.255
 network 10.0.20.0 0.0.0.3
 no auto-summary
+exit
+!-- Configuracion DHCP
+interface gigabitEthernet 0/0.10
+ip helper-address 192.168.30.20
+exit
+interface gigabitEthernet 0/0.20
+ip helper-address 192.168.30.20
 exit
 do write
 ```
