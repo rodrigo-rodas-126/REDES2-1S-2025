@@ -119,7 +119,7 @@ do write
 ```shell
 enable
 configure terminal
-hostname R0
+hostname R01
 interface range gigabitEthernet 0/0-1
 no shutdown
 exit
@@ -187,7 +187,6 @@ channel-group 1 mode active
 no shutdown
 exit
 interface port-channel 1
-no switchport
 ip address 10.0.70.1 255.255.255.252
 no shutdown
 exit
@@ -265,7 +264,7 @@ ip address 10.0.30.1 255.255.255.252
 no shutdown
 exit
 !-- Configuracion Enrutamiento
-router eigrp 2
+router eigrp 1
 network 192.168.30.0 0.0.0.255
 network 192.168.40.0 0.0.0.255
 network 10.0.30.0 0.0.0.3
@@ -310,7 +309,7 @@ ip address 10.0.40.1 255.255.255.252
 no shutdown
 exit
 !-- Configuracion Enrutamiento
-router eigrp 2
+router eigrp 1
 network 192.168.30.0 0.0.0.255
 network 192.168.40.0 0.0.0.255
 network 10.0.40.0 0.0.0.3
@@ -356,12 +355,11 @@ channel-group 2 mode active
 no shutdown
 exit
 interface port-channel 2
-no switchport
 ip address 10.0.80.1 255.255.255.252
 no shutdown
 exit
 !-- Configuracion Enrutamiento
-router eigrp 2
+router eigrp 1
 network 10.0.30.0 0.0.0.3
 network 10.0.40.0 0.0.0.3
 network 10.0.70.0 0.0.0.3
@@ -395,12 +393,11 @@ channel-group 2 mode passive
 no shutdown
 exit
 interface port-channel 2
-no switchport
 ip address 10.0.80.2 255.255.255.252
 no shutdown
 exit
 !-- Configuracion Enrutamiento
-router eigrp 3
+router eigrp 1
 network 10.0.50.0 0.0.0.3
 network 10.0.80.0 0.0.0.3
 no auto-summary
